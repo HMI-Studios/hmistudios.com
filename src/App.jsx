@@ -1,8 +1,10 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Layout from './views/Layout.jsx';
+import NoPage from './views/NoPage.jsx';
 import Home from './views/Home.jsx';
 import Members from './views/Members.jsx';
-import NavBar from './components/NavBar.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,12 +25,15 @@ class App extends React.Component {
     const { view } = this.state;
     return (
       <>
-        <NavBar setView={this.setView} view={view} />
-        <div className='content'>
-          {view}
-          {view === 'home' && <Home setView={this.setView} />}
-          {view === 'members' && <Members setView={this.setView} />}
-        </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="members" element={<Members />} />
+              <Route path="*" element={<NoPage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
       </>
     );
   }

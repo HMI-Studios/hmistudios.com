@@ -1,19 +1,25 @@
 import React from 'react';
+import { useLocation, Link } from 'react-router-dom';
 
-const viewBtns = {
-  members: 'Members',
-  games: 'Games',
-  music: 'Music',
-  books: 'Books',
+const paths = {
+  '/members': 'Members',
+  '/games': 'Games',
+  '/music': 'Music',
+  '/books': 'Books',
 }
 
-const NavBar = ({ setView, view }) => (
-  <nav className='ma-4 d-flex align-center gap-1'>
-    <a><h1 className='ma-4 mr-8' onClick={() => setView('home')}>HMI Studios</h1></a>
-    {Object.keys(viewBtns).map(key => (
-      <a className={`nav-btn ${key === view ? 'nav-selected' : ''}`} onClick={() => setView(key)}>{viewBtns[key]}</a>
-    ))}
-  </nav>
-);
+const NavBar = () => {
+  const location = useLocation();
+  console.log(location);
+
+  return (
+    <nav className="ma-4 d-flex align-center gap-1">
+      <Link className="link" to="/"><h1 className="ma-4 mr-8">HMI Studios</h1></Link>
+      {Object.keys(paths).map(path => (
+        <Link key={path} className={`link nav-btn ${path === location.pathname ? 'nav-selected' : ''}`} to={path}>{paths[path]}</Link>
+      ))}
+    </nav>
+  );
+};
 
 export default NavBar;
