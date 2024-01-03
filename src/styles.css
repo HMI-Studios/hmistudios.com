@@ -1,0 +1,42 @@
+@import "themes.css";
+@import "layout.css";
+
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  padding: 12px 48px;
+  word-wrap: break-word;
+}
+
+nav {
+  background-color: var(--navbar-color);
+  filter: drop-shadow(0 5px 4px #000);
+  border-radius: 12px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.nav-btn {
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 20px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+.nav-btn:hover {
+  background-color: #ffffff47;
+}
+
+.nav-selected {
+  border-bottom: 3px solid whitesmoke;
+  padding-bottom: 2px;
+  border-radius: 6px 6px 0 0;
+}
