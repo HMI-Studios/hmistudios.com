@@ -5,6 +5,8 @@ import Layout from './views/Layout.jsx';
 import NoPage from './views/NoPage.jsx';
 import Home from './views/Home.jsx';
 import Members from './views/Members.jsx';
+import Games from './views/Games.jsx';
+import Misc from './views/Misc.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,6 +32,8 @@ class App extends React.Component {
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="members" element={<Members />} />
+              <Route path="games" element={<Games />} />
+              <Route path="misc" element={<Misc />} />
               <Route path="*" element={<NoPage />} />
             </Route>
           </Routes>

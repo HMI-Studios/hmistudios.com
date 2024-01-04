@@ -6,6 +6,7 @@ const paths = {
   '/games': 'Games',
   '/music': 'Music',
   '/books': 'Books',
+  '/misc': 'Misc.',
 }
 
 const NavBar = () => {

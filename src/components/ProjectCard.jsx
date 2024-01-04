@@ -26,9 +26,10 @@ const getLinks = (data) => {
   return links;
 };
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, collapsed }) => {
 
   const [data, setData] = useState(undefined);
+  const [isCollapsed, setIsCollapsed] = useState(collapsed);
 
   useEffect(() => {
     axios.get(`/data/projects/project_cards/${project}.json`)
@@ -47,16 +48,31 @@ const ProjectCard = ({ project }) => {
   return (
     <>
       {data && (
-        <Card
-          key={data.title}
-          title={data.title}
-          subtitle={data.authors && `by ${data.authors}`}
-          body={data.desc}
-          cover={
-            <img src={data.image}></img>
-          }
-          links={getLinks(data)}
-        />
+        <>
+          {isCollapsed ? (
+            <div className="card d-flex align-center space-between pa-4">
+              <h2 className="ma-0">{data.title}</h2>
+              <a className="link nav-btn" onClick={() => setIsCollapsed(false)}>Show Card</a>
+            </div>
+          ) : (
+            <Card
+              key={data.title}
+              title={data.title}
+              subtitle={data.authors && `by ${data.authors}`}
+              body={data.desc}
+              cover={
+                <img src={data.image}></img>
+              }
+              links={getLinks(data)}
+              actions={[
+                {
+                  title: 'Hide Card',
+                  action: () => setIsCollapsed(true),
+                },
+              ]}
+            />
+          )}
+        </>
       )}
     </>
   );

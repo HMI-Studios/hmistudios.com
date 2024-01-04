@@ -33,6 +33,10 @@
   gap: 32px;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .align-start {
   align-items: start;
 }
@@ -86,6 +90,22 @@
 }
 
 /* Padding */
+.pa-0 {
+  padding: 0;
+}
+.pa-1 {
+  padding: 4px;
+}
+.pa-2 {
+  padding: 8px;
+}
+.pa-3 {
+  padding: 12px;
+}
+.pa-4 {
+  padding: 16px;
+}
+
 .pb-0 {
   padding-bottom: 0;
 }
