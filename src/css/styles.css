@@ -46,6 +46,7 @@ nav {
   background-color: var(--card-color);
   filter: drop-shadow(0 3px 3px #000);
   border-radius: 12px;
+  overflow: hidden;
 }
 .card-content {
   padding: 20px;

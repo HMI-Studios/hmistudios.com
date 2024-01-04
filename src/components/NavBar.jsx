@@ -10,7 +10,6 @@ const paths = {
 
 const NavBar = () => {
   const location = useLocation();
-  console.log(location);
 
   return (
     <nav className="ma-4 d-flex align-center gap-1">

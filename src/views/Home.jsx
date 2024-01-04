@@ -10,15 +10,11 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <h1>Home</h1>
-        <div>
-          <ProjectCard view={'home'} project={'remnant'} />
-          <ProjectCard view={'home'} project={'civclonejs'} />
-          <ProjectCard view={'home'} project={'archivium'} />
-          <ProjectCard view={'home'} project={'budgeteer'} />
-          <ProjectCard view={'home'} project={'simplesequencer'} />
-          <ProjectCard view={'home'} project={'voteinator'} />
-          <ProjectCard view={'home'} project={'tkdmotions'} />
+        <div className="d-flex flex-column align-center"><h1>Featured Projects</h1></div>
+        <div className="d-flex flex-column gap-6">
+          <ProjectCard project={'civclonejs'} />
+          <ProjectCard project={'voteinator'} />
+          <ProjectCard project={'tkdmotions'} />
         </div>
       </>
     );

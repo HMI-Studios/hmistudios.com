@@ -1,16 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Card = ({ title, subtitle, links, avatar }) => {
+const Card = ({ title, subtitle, body, links, cover, avatar }) => {
 
   return (
     <div className="card">
-      <div className="d-flex align-center card-content">
-        {avatar && <div className="avatar mr-6">{avatar}</div>}
-        <div className="d-flex flex-column gap-1">
-          <h2 className="ma-0">{title}</h2>
-          {subtitle && <span className="subtitle">{subtitle}</span>}
+      {cover && <div className="d-flex flex-column">{cover}</div>}
+      <div className="d-flex flex-column gap-1 card-content">
+        <div className="d-flex align-center">
+          {avatar && <div className="avatar mr-6">{avatar}</div>}
+          <div className="d-flex flex-column gap-1">
+            <h2 className="ma-0">{title}</h2>
+            {subtitle && <span className="subtitle">{subtitle}</span>}
+          </div>
         </div>
+        {body && <p>{body}</p>}
       </div>
       {links && (
         <div className="d-flex align-center ma-2 gap-2">

@@ -1,7 +1,32 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const ProjectCard = ({ view, project, setView }) => {
+import Card from '../components/Card.jsx';
+
+const getLinks = (data) => {
+  const links = [];
+  if (data.page) {
+    links.push({
+      title: 'Learn More',
+      path: data.page,
+    });
+  }
+  if (data.site) {
+    links.push({
+      title: 'Visit Site',
+      href: data.site,
+    });
+  }
+  if (data.github) {
+    links.push({
+      title: 'GitHub Repo',
+      href: data.github,
+    });
+  }
+  return links;
+};
+
+const ProjectCard = ({ project }) => {
 
   const [data, setData] = useState(undefined);
 
@@ -20,9 +45,20 @@ const ProjectCard = ({ view, project, setView }) => {
   }, []);
 
   return (
-    <div>
-      {JSON.stringify(data)}
-    </div>
+    <>
+      {data && (
+        <Card
+          key={data.title}
+          title={data.title}
+          subtitle={data.authors && `by ${data.authors}`}
+          body={data.desc}
+          cover={
+            <img src={data.image}></img>
+          }
+          links={getLinks(data)}
+        />
+      )}
+    </>
   );
 };
 
