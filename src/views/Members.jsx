@@ -19,13 +19,24 @@ class Members extends React.Component {
   }
 
   render() {
-    const { setView } = this.props;
     const { memberData } = this.state;
     return (
       <>
-        {memberData && memberData.map(member => (
-          <Card key={member.id} title={member.name} />
-        ))}
+        <div className="d-flex flex-column gap-4">
+          {memberData && memberData.map(member => (
+            <Card
+              key={member.id}
+              title={member.name}
+              subtitle={member.short_desc}
+              links={member.links}
+              avatar={
+                <>
+                  {member.avatar ? (<img src={member.avatar}></img>) : (<div className="avatar-default">{member.name.substring(0, 1)}</div>)}
+                </>
+              }
+            />
+          ))}
+        </div>
       </>
     );
   }

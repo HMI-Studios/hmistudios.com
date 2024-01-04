@@ -1,0 +1,8 @@
+{
+    "title": "Simple Sequencer",
+    "desc": "A simple online tool for creating music sequences.",
+    "github": "https://github.com/kjniemela/SimpleSequencer",
+    "site": "https://hmi.dynu.net/simplesequencer",
+    "authors": "kjniemela",
+    "image": "/static/images/project_cards/simplesequencer.png"
+}

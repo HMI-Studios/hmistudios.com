@@ -8,18 +8,17 @@ class Home extends React.Component {
   }
 
   render() {
-    const { setView } = this.props;
     return (
       <>
         <h1>Home</h1>
         <div>
-          <ProjectCard view={'home'} project={'remnant'} setView={setView} />
-          <ProjectCard view={'home'} project={'civclonejs'} setView={setView} />
-          <ProjectCard view={'home'} project={'archivium'} setView={setView} />
-          <ProjectCard view={'home'} project={'budgeteer'} setView={setView} />
-          <ProjectCard view={'home'} project={'simplesequencer'} setView={setView} />
-          <ProjectCard view={'home'} project={'voteinator'} setView={setView} />
-          <ProjectCard view={'home'} project={'tkdmotions'} setView={setView} />
+          <ProjectCard view={'home'} project={'remnant'} />
+          <ProjectCard view={'home'} project={'civclonejs'} />
+          <ProjectCard view={'home'} project={'archivium'} />
+          <ProjectCard view={'home'} project={'budgeteer'} />
+          <ProjectCard view={'home'} project={'simplesequencer'} />
+          <ProjectCard view={'home'} project={'voteinator'} />
+          <ProjectCard view={'home'} project={'tkdmotions'} />
         </div>
       </>
     );

@@ -1,0 +1,8 @@
+{
+    "title": "TKDMotions",
+    "desc": "A small application to generate random sets of Taekwondo techniques.",
+    "github": "https://github.com/kjniemela/TKDMotions",
+    "site": "https://kjniemela.github.io/TKDMotions/",
+    "authors": "kjniemela",
+    "image": "/static/images/project_cards/tkdmotions.png"
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "kjniemela",
+    "name": "Carl Heine (Johannes Niemelä)",
+    "short_desc": "Web Developer, Game Developer, Composer, Writer",
+    "avatar": "/static/images/avatar/kjniemela.jpg",
+    "links": [
+      {
+        "title": "GitHub",
+        "href": "https://github.com/kjniemela"
+      },
+      {
+        "title": "LinkedIn",
+        "href": "https://www.linkedin.com/in/johannes-niemelae/"
+      },
+      {
+        "title": "YouTube",
+        "href": "https://www.youtube.com/channel/UC1hUNn3AOMr0Fz35diPTHrw"
+      }
+    ]
+  },
+  {
+    "id": "mocqoro",
+    "name": "Mocqoro",
+    "links": [
+      {
+        "title": "GitHub",
+        "href": "https://github.com/JoelNiemela"
+      }
+    ]
+  },
+  {
+    "id": "izra",
+    "name": "Izra",
+    "links": [
+      {
+        "title": "YouTube",
+        "href": "https://www.youtube.com/@Izra931"
+      }
+    ]
+  }
+]

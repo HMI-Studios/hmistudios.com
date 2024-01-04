@@ -5,6 +5,8 @@ body {
   margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: 'Roboto', 'Raleway', 'Open Sans';
+  font-size: 1.15rem;
 }
 
 .content {
@@ -38,4 +40,32 @@ nav {
   border-bottom: 3px solid whitesmoke;
   padding-bottom: 2px;
   border-radius: 6px 6px 0 0;
+}
+
+.card {
+  background-color: var(--card-color);
+  filter: drop-shadow(0 3px 3px #000);
+  border-radius: 12px;
+}
+.card-content {
+  padding: 20px;
+}
+.card .avatar {
+  background-color: #222;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.card .avatar img {
+  width: 100%;
+  height: 100%;
+}
+.card .subtitle {
+  font-size: 15px;
+  font-weight: 100;
 }
