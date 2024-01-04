@@ -28,7 +28,7 @@ class App extends React.Component {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Members />} />
+              <Route index element={<Home />} />
               <Route path="members" element={<Members />} />
               <Route path="*" element={<NoPage />} />
             </Route>
