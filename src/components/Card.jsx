@@ -17,7 +17,7 @@ const Card = ({ title, subtitle, body, links, actions, cover, avatar, small }) =
         {body && <p>{body}</p>}
       </div>
       <div className="card-actions">
-        <div className="d-flex space-between flex-wrap gap-1">
+        <div className="d-flex space-between flex-wrap flex-grow gap-1">
           {links && (
             <div className="d-flex align-center ma-2 gap-2">
               {links.map((link, i) => {

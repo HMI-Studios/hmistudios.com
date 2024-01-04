@@ -23,10 +23,16 @@ const getLinks = (data) => {
       href: data.github,
     });
   }
+  if (data.read) {
+    links.push({
+      title: 'Read',
+      href: data.read,
+    });
+  }
   return links;
 };
 
-const ProjectCard = ({ project, collapsed, collapsible, small }) => {
+const ProjectCard = ({ project, collapsed, collapsible, small, draft }) => {
 
   const [data, setData] = useState(undefined);
   const [isCollapsed, setIsCollapsed] = useState(collapsed);
@@ -64,12 +70,16 @@ const ProjectCard = ({ project, collapsed, collapsible, small }) => {
                 <img src={data.image}></img>
               }
               links={getLinks(data)}
-              actions={collapsible && [
-                {
+              actions={[
+                draft && {
+                  title: 'Coming Soon!',
+                  action: () => {},
+                },
+                collapsible && {
                   title: 'Hide Card',
                   action: () => setIsCollapsed(true),
                 },
-              ]}
+              ].filter(item => item)}
               small={small}
             />
           )}

@@ -12,6 +12,10 @@
   flex-wrap: wrap;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 .gap-1 {
   gap: 4px;
 }

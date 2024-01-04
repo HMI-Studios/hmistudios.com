@@ -6,7 +6,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: 'Roboto', 'Raleway', 'Open Sans';
-  font-size: 1.15rem;
 }
 
 .content {
@@ -42,7 +41,7 @@ nav {
 .nav-btn {
   padding: 5px 8px;
   border-radius: 6px;
-  font-size: 20px;
+  font-size: 17px;
   white-space: nowrap;
 }
 .nav-btn:hover {
