@@ -26,7 +26,7 @@ const getLinks = (data) => {
   return links;
 };
 
-const ProjectCard = ({ project, collapsed }) => {
+const ProjectCard = ({ project, collapsed, collapsible, small }) => {
 
   const [data, setData] = useState(undefined);
   const [isCollapsed, setIsCollapsed] = useState(collapsed);
@@ -64,12 +64,13 @@ const ProjectCard = ({ project, collapsed }) => {
                 <img src={data.image}></img>
               }
               links={getLinks(data)}
-              actions={[
+              actions={collapsible && [
                 {
                   title: 'Hide Card',
                   action: () => setIsCollapsed(true),
                 },
               ]}
+              small={small}
             />
           )}
         </>

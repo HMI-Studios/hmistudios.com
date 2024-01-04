@@ -11,7 +11,7 @@ class Games extends React.Component {
     return (
       <>
         <div className="d-flex flex-column align-center"><h1>Games</h1></div>
-        <div className="d-flex flex-column gap-6">
+        <div className="d-flex flex-column align-center gap-6">
           <ProjectCard project={'civclonejs'} />
         </div>
       </>

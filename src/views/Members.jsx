@@ -22,7 +22,8 @@ class Members extends React.Component {
     const { memberData } = this.state;
     return (
       <>
-        <div className="d-flex flex-column gap-4">
+        <div className="d-flex flex-column align-center"><h1>Team Members</h1></div>
+        <div className="d-flex flex-column align-center gap-4">
           {memberData && memberData.map(member => (
             <Card
               key={member.id}
