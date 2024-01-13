@@ -8,6 +8,7 @@
   "license": "ISC",
   "scripts": {
     "clean": "rm dist/bundle.js",
+    "start": "python -m http.server 80 -d dist/",
     "build-dev": "webpack --watch --mode development",
     "build-prod": "webpack --mode production"
   },

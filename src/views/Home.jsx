@@ -12,6 +12,7 @@ class Home extends React.Component {
       <>
         <div className="d-flex flex-column align-center"><h1>Featured Projects</h1></div>
         <div className="d-flex flex-column align-center gap-6">
+          <ProjectCard project={'kyo'} />
           <ProjectCard project={'civclonejs'} />
           <ProjectCard project={'voteinator'} />
           <ProjectCard project={'tkdmotions'} />
