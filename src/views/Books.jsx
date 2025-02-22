@@ -19,6 +19,11 @@ class Books extends React.Component {
         <div className="d-flex flex-row flex-wrap justify-center gap-6">
           <ProjectCard small draft project={'books/intothemist'} />
         </div>
+        <div className="d-flex flex-column align-center"><h1>Other Works</h1></div>
+        <div className="d-flex flex-row flex-wrap justify-center gap-6">
+          <ProjectCard small project={'books/goneandforgotten'} />
+          <ProjectCard small draft project={'books/projecthumanity'} />
+        </div>
       </>
     );
   }
