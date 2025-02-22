@@ -1,8 +1,8 @@
 {
     "title": "Archivium",
-    "desc": "",
+    "desc": "A worldbuilding tool.",
     "github": "https://github.com/JoelNiemela/archivium",
-    "site": "https://hmi.dynu.net/archivium",
+    "site": "https://archivium.net",
     "authors": "mocqoro & kjniemela",
-    "image": "/static/images/project_cards/archivium.png"
+    "image": "/static/images/project_cards/archivium-close.png"
 }
