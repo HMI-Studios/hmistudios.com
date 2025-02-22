@@ -1,6 +1,6 @@
 {
     "title": "CivCloneJS",
-    "desc": "A browser-based game drawing inspiration from the popular Civilization game series.",
+    "desc": "A browser-based game drawing inspiration from Sid Meier's Civilization and Victoria II.",
     "github": "https://github.com/HMI-Studios/CivCloneJS",
     "authors": "kjniemela & mocqoro",
     "image": "/static/images/project_cards/civclonejs.png"
