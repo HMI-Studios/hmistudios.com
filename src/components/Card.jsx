@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Card = ({ title, subtitle, body, links, actions, cover, avatar, small }) => {
+const Card = ({ title, subtitle, body, links, actions, cover, avatar, small, contain }) => {
 
   return (
     <div className={`card ${small && 'card-small'}`}>
-      {cover && <div className="d-flex flex-column card-cover">{cover}</div>}
+      {cover && <div className={`d-flex flex-column card-cover ${contain ? 'contain' : ''}`}>{cover}</div>}
       <div className="d-flex flex-column gap-1 card-content">
         <div className="d-flex align-center">
           {avatar && <div className="avatar mr-6">{avatar}</div>}

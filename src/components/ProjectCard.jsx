@@ -23,6 +23,12 @@ const getLinks = (data) => {
       href: data.github,
     });
   }
+  if (data.youtube) {
+    links.push({
+      title: 'YouTube',
+      href: data.youtube,
+    });
+  }
   if (data.read) {
     links.push({
       title: 'Read',
@@ -32,7 +38,7 @@ const getLinks = (data) => {
   return links;
 };
 
-const ProjectCard = ({ project, collapsed, collapsible, small, draft }) => {
+const ProjectCard = ({ project, collapsed, collapsible, small, draft, contain }) => {
 
   const [data, setData] = useState(undefined);
   const [isCollapsed, setIsCollapsed] = useState(collapsed);
@@ -81,6 +87,7 @@ const ProjectCard = ({ project, collapsed, collapsible, small, draft }) => {
                 },
               ].filter(item => item)}
               small={small}
+              contain={contain}
             />
           )}
         </>

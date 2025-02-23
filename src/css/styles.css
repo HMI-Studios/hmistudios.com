@@ -87,6 +87,12 @@ nav {
   object-position: top;
   min-height: 100%;
 }
+.card-cover.contain img {
+  object-fit: contain;
+  object-position: center;
+  background-color: #000;
+}
+
 
 .card-actions {
   display: flex;

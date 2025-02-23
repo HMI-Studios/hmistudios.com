@@ -6,6 +6,7 @@ import NoPage from './views/NoPage.jsx';
 import Home from './views/Home.jsx';
 import Members from './views/Members.jsx';
 import Games from './views/Games.jsx';
+import Music from './views/Music.jsx';
 import Books from './views/Books.jsx';
 import Misc from './views/Misc.jsx';
 
@@ -34,6 +35,7 @@ class App extends React.Component {
               <Route index element={<Home />} />
               <Route path="members" element={<Members />} />
               <Route path="games" element={<Games />} />
+              <Route path="music" element={<Music />} />
               <Route path="books" element={<Books />} />
               <Route path="misc" element={<Misc />} />
               <Route path="*" element={<NoPage />} />
