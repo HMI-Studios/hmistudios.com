@@ -21,11 +21,20 @@
   },
   {
     "id": "mocqoro",
-    "name": "Mocqoro",
+    "name": "Mocqoro (Joel Niemelä)",
+    "avatar": "https://avatars.githubusercontent.com/u/27364307?v=4",
     "links": [
       {
         "title": "GitHub",
         "href": "https://github.com/JoelNiemela"
+      },
+      {
+        "title": "LinkedIn",
+        "href": "https://www.linkedin.com/in/joel-niemelae/"
+      },
+      {
+        "title": "Website",
+        "href": "https://joelniemela.github.io/"
       }
     ]
   },
