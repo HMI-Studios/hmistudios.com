@@ -1,0 +1,35 @@
+---
+layout: base.njk
+title: Music
+section: music
+---
+<div class="page-wrap">
+
+  <div class="page-header">
+    <span class="page-header-eyebrow">// music</span>
+    <h1>Music</h1>
+    <p>Albums, soundtracks, and singles from the studio and its members — all on YouTube.</p>
+  </div>
+
+  <div class="music-list">
+    {% for track in music %}
+    <a href="{{ track.youtubeUrl }}" target="_blank" rel="noopener" class="music-item">
+      <div class="music-thumb">
+        {% if track.image %}
+          <img src="{{ track.image }}" alt="{{ track.title }}">
+        {% else %}
+          <span class="music-thumb-ph">♪</span>
+        {% endif %}
+      </div>
+      <div class="music-info">
+        <div class="music-title">{{ track.title }}</div>
+        <div class="music-meta">
+          {{ track.year }} &middot; {{ track.type }} &middot; by {{ track.by | join(", ") }}{% if track.trackCount %} &middot; {{ track.trackCount }} tracks{% endif %}
+        </div>
+      </div>
+      <span class="music-yt-badge">▶ YouTube</span>
+    </a>
+    {% endfor %}
+  </div>
+
+</div>

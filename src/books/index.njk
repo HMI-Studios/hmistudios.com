@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: Books
+section: books
+---
+<div class="page-wrap">
+
+  <div class="page-header">
+    <span class="page-header-eyebrow">// books</span>
+    <h1>Books</h1>
+    <p>Novels, short stories, and everything in between — written by members of the studio.</p>
+  </div>
+
+  <div class="books-grid">
+    {% for book in books %}
+    <a {% if book.url %}href="{{ book.url }}"{% endif %} class="book-card">
+      <div class="book-cover">
+        <div class="book-spine"></div>
+        {% if book.cover %}
+          <img src="{{ book.cover }}" alt="{{ book.title }}">
+        {% else %}
+          <div class="book-cover-ph">{{ book.title }}</div>
+        {% endif %}
+      </div>
+      <div class="book-title">{{ book.title }}</div>
+      <div class="book-author">{{ book.author }}</div>
+      <div class="book-year">{{ book.year }}</div>
+    </a>
+    {% endfor %}
+  </div>
+
+</div>

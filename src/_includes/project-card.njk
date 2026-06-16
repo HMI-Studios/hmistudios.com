@@ -1,0 +1,38 @@
+{% macro projectCard(project, memberPage=null) %}
+<div href="{{ project.url | default('#') }}" class="project-card" {% if project.external %}target="_blank" rel="noopener"{% endif %}>
+  <div class="project-screenshot">
+    {% if project.image %}
+      <img src="{{ project.image }}" alt="{{ project.title }}">
+    {% else %}
+      <span class="project-screenshot-ph">{{ project.emoji | default("🎮") }}</span>
+    {% endif %}
+  </div>
+  <div class="project-body">
+    <div class="project-title">{{ project.title }}</div>
+    {% if project.by %}
+      {% if memberPage %}
+        {% if project.by | reject("equalto", memberPage) | length > 0 %}
+          <div class="grid-card-by">with {{ project.by | reject("equalto", memberPage) | join(" & ") }}</div>
+        {% endif %}
+      {% else %}
+        <div class="grid-card-by">by {{ project.by | join(' & ') }}</div>
+      {% endif %}
+    {% endif %}
+    <div class="project-desc">{{ project.desc }}</div>
+    {% if project.tags %}
+    <div class="tag-row">
+      {% for tag in project.tags %}
+        <span class="tag {{ tag.style | default('') }}">{{ tag.label }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if project.links %}
+    <div class="project-links">
+      {% for link in project.links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

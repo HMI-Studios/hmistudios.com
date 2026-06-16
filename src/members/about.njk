@@ -1,0 +1,63 @@
+---
+layout: base.njk
+section: members
+pagination:
+  data: members
+  size: 1
+  alias: member
+permalink: "/members/{{ member.slug }}/"
+eleventyComputed:
+  title: "{{ member.name }}"
+---
+<div class="page-wrap">
+
+  <div style="font-size: 12px; color: var(--cream-dim); margin-bottom: 2rem;">
+    <a href="/members/" style="color: var(--teal); text-decoration: none;">Members</a>
+    <span style="margin: 0 0.5rem; opacity: 0.5;">/</span>
+    <span>{{ member.name }}</span>
+  </div>
+
+  <div class="member-about">
+
+    <div class="member-about-header">
+      <div class="member-about-avatar">
+        {% if member.photo %}
+          <img src="{{ member.photo }}" alt="{{ member.name }}">
+        {% else %}
+          {{ member.initials }}
+        {% endif %}
+      </div>
+      <div class="member-about-meta">
+        <h1>{{ member.name }}</h1>
+        <div class="member-about-role">{{ member.role }}</div>
+        {% if member.links.length %}
+        <div class="member-about-links">
+          {% for link in member.links %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} ↗</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="member-about-bio">
+      {% for paragraph in member.bio %}
+        <p>{{ paragraph }}</p>
+        {% if not loop.last %}<br>{% endif %}
+      {% endfor %}
+    </div>
+
+    {% if member.projects.length %}
+    <div class="member-projects-title">// projects</div>
+
+    <div class="project-list">
+      {% from "project-card.njk" import projectCard %}
+      {% for proj in member.projects %}
+        {{ projectCard(proj, member.slug) }}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+  </div>
+
+</div>

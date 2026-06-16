@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if title %}{{ title }} — HMI Studios{% else %}HMI Studios{% endif %}</title>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="/" class="nav-logo">
+    <img src="/img/hmi-icon.svg" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="/members/" {% if section == "members" %}class="active"{% endif %}>Members</a></li>
+    <li><a href="/games/" {% if section == "games" %}class="active"{% endif %}>Games</a></li>
+    <li><a href="/music/" {% if section == "music" %}class="active"{% endif %}>Music</a></li>
+    <li><a href="/books/" {% if section == "books" %}class="active"{% endif %}>Books</a></li>
+    <li><a href="/misc/" {% if section == "misc" %}class="active"{% endif %}>Misc.</a></li>
+  </ul>
+</nav>
+
+{{ content | safe }}
+
+<footer>
+  <div class="footer-logo">HMI Studios</div>
+  <p class="footer-copy">&copy; {% year %} HMI Studios</p>
+</footer>
+
+</body>
+</html>

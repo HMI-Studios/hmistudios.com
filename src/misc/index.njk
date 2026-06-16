@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Misc.
+section: misc
+---
+<div class="page-wrap">
+
+  <div class="page-header">
+    <span class="page-header-eyebrow">// misc. software</span>
+    <h1>Miscellaneous Projects</h1>
+    <p>Tools, apps, experiments, and other software that doesn't quite fit anywhere else.</p>
+  </div>
+
+  <div class="card-grid">
+    {% from "grid-card.njk" import gridCard %}
+    {% for sw in misc %}
+      {{ gridCard(sw) }}
+    {% endfor %}
+  </div>
+
+</div>

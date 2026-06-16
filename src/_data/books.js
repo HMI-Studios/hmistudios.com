@@ -1,0 +1,51 @@
+module.exports = [
+  {
+    title: "Remnants: Trial by Fire",
+    author: "kjniemela",
+    year: "Ongoing",
+    cover: "https://img.wattpad.com/cover/396783814-512-k263748.jpg",
+    url: "https://tapas.io/series/Remnants-Trial-by-Fire/info",
+  },
+  {
+    title: "Gone and Forgotten — Short Stories",
+    author: "kjniemela",
+    year: "2024",
+    cover: "https://img.wattpad.com/cover/373411501-512-k399250.jpg",
+    url: "https://www.wattpad.com/story/373411501-gone-and-forgotten-short-stories",
+  },
+  {
+    title: "A Journal for the End of Our World",
+    author: "kjniemela",
+    year: "Ongoing",
+    cover: "https://img.wattpad.com/cover/410643135-512-k260960.jpg",
+    url: "https://tapas.io/series/A-Journal-for-the-End-of-Our-World/info",
+  },
+  {
+    title: "Into the  Mist",
+    author: "kjniemela",
+    year: "Coming soon",
+    cover: "https://img.wattpad.com/cover/263119006-512-k572356.jpg",
+    url: "",
+  },
+  {
+    title: "Crossfire",
+    author: "kjniemela",
+    year: "Coming soon",
+    cover: "https://img.wattpad.com/cover/398096732-512-k191139.jpg",
+    url: "",
+  },
+  {
+    title: "Unspoken For",
+    author: "kjniemela",
+    year: "Coming soon",
+    cover: "https://img.wattpad.com/cover/398097727-512-k265192.jpg",
+    url: "",
+  },
+  {
+    title: "Times Gone By",
+    author: "kjniemela",
+    year: "Coming soon",
+    cover: "https://img.wattpad.com/cover/253558463-512-k638650.jpg",
+    url: "",
+  },
+];

@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: Members
+section: members
+---
+<div class="page-wrap">
+
+  <div class="page-header">
+    <span class="page-header-eyebrow">// the team</span>
+    <h1>Members</h1>
+    <p>The people behind HMI Studios.</p>
+  </div>
+
+  <div class="members-grid">
+    {% for member in members %}
+    <a href="/members/{{ member.slug }}/" class="member-card">
+      <div class="member-avatar">
+        {% if member.photo %}
+          <img src="{{ member.photo }}" alt="{{ member.name }}">
+        {% else %}
+          {{ member.initials }}
+        {% endif %}
+      </div>
+      <div class="member-name">{{ member.name }}</div>
+      <div class="member-role">{{ member.role }}</div>
+    </a>
+    {% endfor %}
+  </div>
+
+</div>
