@@ -1,0 +1,36 @@
+---
+layout: base.njk
+title: Games
+section: games
+---
+<div class="page-wrap">
+
+  <div class="page-header">
+    <span class="page-header-eyebrow">// games</span>
+    <h1>Games</h1>
+    <p>Browser games, desktop titles, and more — made by the studio and its members.</p>
+  </div>
+
+  <div style="
+    margin-bottom: 2rem;
+    padding: 1.1rem 1.5rem;
+    background: rgba(61,90,128,0.2);
+    border: 1px dashed rgba(245,166,35,0.4);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  ">
+    <div>
+      <div style="font-family: var(--font-pixel); font-size: 9px; color: var(--amber); margin-bottom: 0.3rem;">🕹 HMI Arcade</div>
+      <div style="font-size: 13px; color: var(--cream-dim);">Play our browser-based arcade titles — free, no download needed.</div>
+    </div>
+    <a href="https://games.hmistudios.com" target="_blank" rel="noopener" class="btn btn-outline" style="white-space: nowrap;">Open Arcade ↗</a>
+  </div>
+
+  <div class="project-list">
+    {% from "project-card.njk" import projectCard %}
+    {% for game in games %}
+      {{ projectCard(game) }}
+    {% endfor %}
+  </div>
+
+</div>

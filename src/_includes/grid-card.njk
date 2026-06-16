@@ -1,0 +1,31 @@
+{% macro gridCard(item, memberPage=null) %}
+<div class="grid-card">
+  <div class="grid-card-thumb">
+    {% if item.image %}
+      <img src="{{ item.image }}" alt="{{ item.title }}">
+    {% else %}
+      <span class="grid-card-thumb-ph">{{ item.emoji | default("⚙") }}</span>
+    {% endif %}
+  </div>
+  <div class="grid-card-body">
+    <div class="grid-card-title">{{ item.title }}</div>
+    {% if item.by %}
+      {% if memberPage %}
+        {% if item.by | reject("equalto", memberPage) | length > 0 %}
+          <div class="grid-card-by">with {{ item.by | reject("equalto", memberPage) | join(" & ") }}</div>
+        {% endif %}
+      {% else %}
+        <div class="grid-card-by">by {{ item.by | join(' & ') }}</div>
+      {% endif %}
+    {% endif %}
+    <div class="grid-card-desc">{{ item.desc }}</div>
+    {% if item.links %}
+    <div class="grid-card-links">
+      {% for link in item.links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endmacro %}

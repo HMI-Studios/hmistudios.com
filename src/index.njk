@@ -1,0 +1,77 @@
+---
+layout: base.njk
+title: Home
+section: home
+---
+<section class="hero">
+  <div class="hero-scanlines"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">// HMI Studios</span>
+    <h1 class="hero-title">Games. Music.<br><span>Books. Code.</span><span class="blink">_</span></h1>
+    <p class="hero-sub">An independent studio creating games, music, books, and software — one pixel at a time.</p>
+    <div class="hero-ctas">
+      <a href="/games/" class="btn btn-amber">Our Games</a>
+      <a href="/members/" class="btn btn-outline">Meet the Team</a>
+    </div>
+  </div>
+</section>
+
+<div class="home-section">
+  <span class="section-eyebrow">// featured</span>
+  <h2 class="section-title">Featured Projects</h2>
+
+  <div class="project-list">
+    {% from "project-card.njk" import projectCard %}
+
+    {{ projectCard(misc[0]) }}
+
+    {{ projectCard(games[1]) }}
+
+    {{ projectCard(games[0]) }}
+  </div>
+
+  <a href="/games/" class="section-more">See all projects</a>
+</div>
+
+<hr class="divider">
+
+<div class="home-section" style="padding-top: 3rem; padding-bottom: 3rem;">
+  <span class="section-eyebrow">// explore</span>
+  <h2 class="section-title">What We Make</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem;">
+
+    <a href="/games/" class="grid-card" style="text-decoration:none;">
+      <div class="grid-card-body" style="align-items:flex-start; padding: 1.5rem 1.25rem;">
+        <div style="font-family: var(--font-pixel); font-size: 20px; margin-bottom: 0.75rem; color: var(--amber);">⊞</div>
+        <div class="grid-card-title">Games</div>
+        <div class="grid-card-desc" style="margin-top:0.35rem;">Browser, desktop, and arcade titles.</div>
+      </div>
+    </a>
+
+    <a href="/music/" class="grid-card" style="text-decoration:none;">
+      <div class="grid-card-body" style="align-items:flex-start; padding: 1.5rem 1.25rem;">
+        <div style="font-family: var(--font-pixel); font-size: 20px; margin-bottom: 0.75rem; color: var(--teal);">♪</div>
+        <div class="grid-card-title">Music</div>
+        <div class="grid-card-desc" style="margin-top:0.35rem;">Albums, soundtracks, and singles.</div>
+      </div>
+    </a>
+
+    <a href="/books/" class="grid-card" style="text-decoration:none;">
+      <div class="grid-card-body" style="align-items:flex-start; padding: 1.5rem 1.25rem;">
+        <div style="font-family: var(--font-pixel); font-size: 20px; margin-bottom: 0.75rem; color: var(--cream);">📖</div>
+        <div class="grid-card-title">Books</div>
+        <div class="grid-card-desc" style="margin-top:0.35rem;">Short stories and novels.</div>
+      </div>
+    </a>
+
+    <a href="/misc/" class="grid-card" style="text-decoration:none;">
+      <div class="grid-card-body" style="align-items:flex-start; padding: 1.5rem 1.25rem;">
+        <div style="font-family: var(--font-pixel); font-size: 20px; margin-bottom: 0.75rem; color: #9EB8D9;">&lt;/&gt;</div>
+        <div class="grid-card-title">Software</div>
+        <div class="grid-card-desc" style="margin-top:0.35rem;">Tools, apps, and experiments.</div>
+      </div>
+    </a>
+
+  </div>
+</div>
