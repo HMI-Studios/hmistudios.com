@@ -49,6 +49,21 @@ module.exports = [
     ],
     links: [
       { label: "YouTube", url: "https://www.youtube.com/@Izra931" },
+      { label: "Portfolio", url: "https://photography.hmistudios.com" },
+    ],
+    projects: [
+    ]
+  },
+  {
+    slug: "cas",
+    name: "Cas",
+    initials: "SC",
+    role: "Photographer · Writer",
+    photo: "/img/avatar/cas.png",
+    bio: [
+    ],
+    links: [
+      { label: "Instagram", url: "https://www.instagram.com/casphotography2025/" },
     ],
     projects: [
     ]
