@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Music
+pagination:
+  data: beepboxSongs
+  size: 1
+  alias: song
+permalink: "music/beepbox/{{ song.slug }}/"
+---
+<div class="page-wrap">
+
+  <div class="page-header">
+    <span class="page-header-eyebrow">// BeepBox player</span>
+    <h1>{{ song.name }}</h1>
+  </div>
+
+  <div class="d-flex flex-col">
+    <iframe style="border: none; height: 50vh;" src="{{ song.url }}"></iframe>
+  </div>
+
+</div>

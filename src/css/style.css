@@ -4,6 +4,7 @@
    accent + amber highlight + teal interactive
 ══════════════════════════════════════════ */
 
+@import "layout.css";
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
