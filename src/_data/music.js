@@ -9,6 +9,15 @@ module.exports = [
     image: "/img/projects/trialbyfire.png",
   },
   {
+    title: "Skylands OST",
+    by: ["kjniemela", "CardiacShark", "mocqoro", "CRYPTIKiTE"],
+    year: "Coming Soon",
+    type: "Soundtrack",
+    trackCount: 15,
+    youtubeUrl: "",
+    image: "/img/projects/skylands.png",
+  },
+  {
     title: "Drifter OST",
     by: ["kjniemela", "G_A_C"],
     year: "2022",
