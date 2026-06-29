@@ -10,11 +10,11 @@ module.exports = [
   },
   {
     title: "Skylands OST",
-    by: ["kjniemela", "CardiacShark", "mocqoro", "CRYPTIKiTE"],
-    year: "Coming Soon",
+    by: ["kjniemela", "CardiacStone", "mocqoro", "CRYPTIKiTE"],
+    year: "2026",
     type: "Soundtrack",
     trackCount: 15,
-    youtubeUrl: "",
+    youtubeUrl: "https://www.youtube.com/watch?v=VhTAm2MDWSs&list=PLWDjkoQXzIKY",
     image: "/img/projects/skylands.png",
   },
   {
